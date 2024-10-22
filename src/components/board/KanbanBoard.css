@@ -1,0 +1,22 @@
+.kanban-board {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    overflow-x: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .kanban-board {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .loading, .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+  }
