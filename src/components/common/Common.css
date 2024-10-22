@@ -1,0 +1,40 @@
+.user-avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+  
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .status-dot.unavailable {
+    background-color: var(--color-warning);
+  }
+  
+  .status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2%;
+    right: 3%;
+  }
+  
+  .status-dot.available {
+    background-color: var(--color-success);
+  }
+
+  .loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .loading-container img{
+    width: 100px;
+    height: 100px;
+  }

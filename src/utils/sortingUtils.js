@@ -1,11 +1,33 @@
 export const sortTickets = (tickets, sortBy) => {
-    switch (sortBy) {
-      case 'date':
-        return tickets.sort((a, b) => new Date(a.date) - new Date(b.date));
-      case 'priority':
-        const priorityOrder = { 'Urgent': 1, 'High': 2, 'Medium': 3, 'Low': 4 };
-        return tickets.sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
-      default:
-        return tickets; // Return unsorted if sortBy doesn't match
+  switch (sortBy) {
+    case 'title':
+      return tickets.sort((a, b) => a.title.localeCompare(b.title));
+    
+    case 'priority':
+      return tickets.sort((a, b) => b.priority - a.priority);
+    
+    default:
+      return tickets; 
+  }
+};
+
+export const sortGrouping = (ticketGroups, sortBy) => {
+  const entries = Object.entries(ticketGroups);
+  
+  const sortedEntries = entries.sort((a, b) => {
+    const groupA = a[1];
+    const groupB = b[1];
+    
+    if (sortBy === 'priority') {
+      return groupB.priority - groupA.priority;
+    } else if (sortBy === 'title') {
+      return groupA.title.localeCompare(groupB.title);
     }
-  };
+    return 0;
+  });
+
+  return sortedEntries.reduce((acc, [key, value], index) => {
+    acc[index] = { ...value, originalKey: key };
+    return acc;
+  }, {});
+};

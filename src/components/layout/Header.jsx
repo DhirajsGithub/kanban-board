@@ -7,11 +7,12 @@ import './Header.css';
 const Header = () => {
   const { groupBy, setGroupBy, sortBy, setSortBy } = useBoardContext();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen)
+  };
 
   return (
-    <header className="header">
+    <header  className="header">
       <div className="display-button" onClick={toggleDropdown}>
         <img src={displayIcon} />
         <span>Display </span>
@@ -25,7 +26,13 @@ const Header = () => {
             <span>Grouping</span>
             <select 
               value={groupBy} 
-              onChange={(e) => setGroupBy(e.target.value)}
+              onChange={(e) => {
+                if(e.target.value === 'priority') {
+                  setSortBy('priority')
+                }
+                setIsDropdownOpen(false)
+                setGroupBy(e.target.value)
+              }}
               className="select-input"
             >
               <option value="status">Status</option>
@@ -38,7 +45,10 @@ const Header = () => {
             <span>Ordering</span>
             <select 
               value={sortBy} 
-              onChange={(e) => setSortBy(e.target.value)}
+              onChange={(e) => {
+                setIsDropdownOpen(false)
+                setSortBy(e.target.value)
+              }}
               className="select-input"
             >
               <option value="priority">Priority</option>

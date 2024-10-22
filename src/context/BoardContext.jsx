@@ -1,12 +1,12 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { API_ENDPOINT } from '../constants/apiConstants';
+import {fetchKanbanBoardData} from '../utils/apiUtils';
 
 const BoardContext = createContext();
 
 export const useBoardContext = () => {
   const context = useContext(BoardContext);
   if (!context) {
-    throw new Error('useBoardContext must be used within a BoardProvider');
+    throw new Error('error');
   }
   return context;
 };
@@ -24,12 +24,10 @@ export const BoardProvider = ({ children }) => {
     localStorage.getItem('sortBy') || 'priority'
   );
 
-  // fetching board data
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(API_ENDPOINT);
-        const data = await response.json();
+        const data = await fetchKanbanBoardData();
         setTickets(data.tickets);
         setUsers(data.users);
         setLoading(false);

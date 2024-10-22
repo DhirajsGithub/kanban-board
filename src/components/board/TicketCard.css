@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-width: 300px;
+  
 }
 
 .ticket-header {
@@ -23,32 +23,7 @@
   color: var(--color-text-secondary);
 }
 
-.user-avatar {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-}
 
-.avatar {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-.avatar.unavailable {
-  filter: grayscale(100%);
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--color-text-secondary);
-}
-
-.status-dot.available {
-  background-color: var(--color-primary);
-}
 
 .ticket-title h3 {
   font-size: var(--font-size-md);
