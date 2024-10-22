@@ -2,12 +2,13 @@
     border-radius: var(--radius-lg);
     margin-top: var(--spacing-md);
     padding: var(--spacing-sm);
-    min-width: 350px;
+    min-width: 420px;
   }
   
   .column-header {
     padding: var(--spacing-sm);    
     display: flex;
+    margin-bottom: var(--spacing-lg);
     justify-content: space-between;
     align-items: center;
     font-size: var(--font-size-md);
@@ -52,4 +53,10 @@
   }
   .buttons-col:hover{
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .board-column {
+      min-width: max(300px, 90%);
+    }
   }

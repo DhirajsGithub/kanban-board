@@ -16,6 +16,9 @@
     background-color: var(--color-card);
     cursor: pointer;
   }
+  .display-button:hover {
+    box-shadow: var(--shadow-md);
+  }
   
   .dropdown-menu {
     position: absolute;

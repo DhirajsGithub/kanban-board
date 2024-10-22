@@ -6,8 +6,8 @@
   }
   
   .avatar {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
   }
   
@@ -16,12 +16,13 @@
   }
   
   .status-dot {
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     position: absolute;
-    bottom: 2%;
-    right: 3%;
+    bottom: 0%;
+    right: 0%;
+    border: 1.5px solid white;
   }
   
   .status-dot.available {
