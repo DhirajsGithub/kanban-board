@@ -3,6 +3,7 @@
     margin-top: var(--spacing-md);
     padding: var(--spacing-sm);
     min-width: 420px;
+    
   }
   
   .column-header {

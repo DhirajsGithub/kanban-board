@@ -1,8 +1,7 @@
 .kanban-board {
     display: flex;
+    gap: 10px;
   }
-
-  
   .loading, .error {
     display: flex;
     justify-content: center;

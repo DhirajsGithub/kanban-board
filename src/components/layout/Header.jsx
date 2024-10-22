@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useImperativeHandle, useState } from 'react';
 import displayIcon from '../../assets/icons/Display.svg';
 import downChevron from '../../assets/icons/down.svg';
 import { useBoardContext } from '../../context/BoardContext';
 import './Header.css';
 
-const Header = () => {
+const Header = forwardRef((props, ref) => {
   const { groupBy, setGroupBy, sortBy, setSortBy } = useBoardContext();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen)
   };
+  useImperativeHandle(ref, () => ({
+
+    closeDropDown() {
+      setIsDropdownOpen(false)
+    }
+
+  }));
 
   return (
-    <header  className="header">
+    <header className="header">
       <div className="display-button" onClick={toggleDropdown}>
         <img src={displayIcon} />
         <span>Display </span>
@@ -59,6 +66,6 @@ const Header = () => {
       )}
     </header>
   );
-};
+});
 
 export default Header;

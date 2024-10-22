@@ -6,7 +6,7 @@ import { sortGrouping, sortTickets } from '../utils/sortingUtils';
 import './KanbanBoard.css';
 import Loading from '../components/common/Loading';
 
-const KanbanBoard = () => {
+const KanbanBoard = ({handleKanbanBoardClick}) => {
   const { tickets, users, groupBy, sortBy, loading, error } = useBoardContext();
 
   const displayGrouping = useMemo(() => {
@@ -43,7 +43,7 @@ const KanbanBoard = () => {
   if (error) return <div className="error">{error}</div>;
   
   return (
-    <div className="kanban-board">
+    <div onClick={handleKanbanBoardClick} className="kanban-board">
       {Object.entries(displayGrouping).map(([key, group]) => (
         <BoardColumn
           key={key}
