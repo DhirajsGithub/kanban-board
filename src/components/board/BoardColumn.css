@@ -9,7 +9,7 @@
   .column-header {
     padding: var(--spacing-sm);    
     display: flex;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     justify-content: space-between;
     align-items: center;
     font-size: var(--font-size-md);
