@@ -42,9 +42,9 @@ const Header = forwardRef((props, ref) => {
               }}
               className="select-input"
             >
-              <option value="status">Status</option>
-              <option value="user">User</option>
-              <option value="priority">Priority</option>
+              <option value="status">Status &nbsp; &nbsp; &nbsp;</option>
+              <option value="user">User &nbsp; &nbsp; &nbsp;</option>
+              <option value="priority">Priority &nbsp; &nbsp; &nbsp;</option>
             </select>
           </div>
 
@@ -58,8 +58,8 @@ const Header = forwardRef((props, ref) => {
               }}
               className="select-input"
             >
-              <option value="priority">Priority</option>
-              <option value="title">Title</option>
+              <option value="priority">Priority &nbsp; &nbsp; &nbsp;</option>
+              <option value="title">Title &nbsp; &nbsp; &nbsp;</option>
             </select>
           </div>
         </div>
