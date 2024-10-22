@@ -20,7 +20,7 @@ const TicketCard = ({ ticket, user }) => {
       </div>
 
       <div className="ticket-footer">
-        {groupBy !== "priority" && <img src={getPriorityIcon(ticket.priority).src} className="priority-icon" />  }
+        {groupBy !== "priority" && <img src={getPriorityIcon(ticket.priority)?.src} className="priority-icon" />  }
         {ticket.tag.map((tag, index) => (
           <span key={index} className="tag">
             <div className="tag-circle" />

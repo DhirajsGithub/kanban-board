@@ -17,7 +17,7 @@ export const getStatusIcon = (status) => {
     return { src: inProgressIcon, alt: 'In progress' };
   } else if (normalizedStatus === 'done') {
     return { src: doneIcon, alt: 'Done' };
-  } else if (normalizedStatus === 'canceled' || normalizedStatus === 'cancelled') {
+  } else if ( normalizedStatus === 'cancelled') {
     return { src: canceledIcon, alt: 'Cancelled' };
   } else if (normalizedStatus === 'backlog') {
     return { src: backlogIcon, alt: 'Backlog' };

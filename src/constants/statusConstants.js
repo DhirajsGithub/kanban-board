@@ -3,5 +3,5 @@ export const STATUS_OPTIONS = {
     TODO: 'Todo',
     IN_PROGRESS: 'In progress',
     DONE: 'Done',
-    CANCELED: 'Canceled'
+    CANCELLED: 'Cancelled'
   };
