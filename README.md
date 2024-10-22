@@ -31,7 +31,25 @@ Make sure you have the following installed on your machine:
 - **Node.js** (version 14 or higher)
 - **npm** (Node package manager)
 
-### Installation
+## Intallation for zip file
+1. **Unzip the file kadane-board-dhiraj-borse**:
+2. **Navigate to the project directory**:
+   ```bash
+   cd kadane-board-dhiraj-borse
+   ```
+3. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+4. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+5. **Open the application**:
+    Open [http://localhost:5173/](http://localhost:5173/) in your browser.
+
+
+### Installation for Github 
 
 1. **Clone the repository**:
    ```bash
